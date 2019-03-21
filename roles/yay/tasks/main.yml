@@ -1,0 +1,7 @@
+---
+- name: Install yay
+  become: false
+  aur:
+    use: makepkg
+    name: yay
+    skip_installed: true

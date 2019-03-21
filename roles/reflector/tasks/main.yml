@@ -1,0 +1,9 @@
+---
+- name: Install reflector
+  pacman:
+    name: reflector
+  register: install
+
+- name: Sort millorlist
+  command: reflector --latest 10 --number 10 --sort rate --country 'Japan' --save /etc/pacman.d/mirrorlist
+  when: install.changed

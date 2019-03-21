@@ -1,0 +1,5 @@
+---
+- name: Start and enable gdm
+  service:
+    name: gdm.service
+    enabled: yes

@@ -1,0 +1,8 @@
+---
+- name: Install themes
+  become: false
+  aur:
+    use: yay
+    name: "{{ item }}"
+    skip_installed: true
+  loop: "{{ themes_list }}"

@@ -1,0 +1,41 @@
+---
+- name: Setup ArchLinux on Desktop
+  hosts: all
+  become: true
+  roles:
+    - name: reflector
+      tags:
+        - reflector
+    - name: pacman
+      tags:
+        - pacman
+    - name: makepkg
+      tags:
+        - makepkg
+    - name: yay
+      tags:
+        - yay
+    - name: locate
+      tags:
+        - locate
+    - name: videodriver-intel
+      tags:
+        - videodriver-intel
+    - name: gnome
+      tags:
+        - gnome
+    - name: bluetooth
+      tags:
+        - bluetooth
+    - name: fcitx
+      tags:
+        - fcitx
+    - name: ssd
+      tags:
+        - ssd
+    - name: fonts
+      tags:
+        - fonts
+    - name: themes
+      tags:
+        - themes

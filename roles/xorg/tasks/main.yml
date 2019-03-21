@@ -1,0 +1,4 @@
+---
+- name: Install packages
+  pacman:
+    name: [xorg-server, xorg-apps]

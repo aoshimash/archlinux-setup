@@ -1,0 +1,7 @@
+---
+- name: Install mlocate
+  pacman:
+    name: mlocate
+  notify:
+    - Update database
+    - Start and enable Systemd Timer

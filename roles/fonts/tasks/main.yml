@@ -1,0 +1,8 @@
+---
+- name: Install fonts
+  become: false
+  aur:
+    use: yay
+    name: "{{ item }}"
+    skip_installed: true
+  loop: "{{ fonts_list }}"

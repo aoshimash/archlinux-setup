@@ -1,0 +1,11 @@
+---
+- name: Install packages
+  pacman:
+    name: [fcitx, fcitx-im, fcitx-configtool, fcitx-mozc]
+
+- name: Copy .xprofile
+  become: false
+  copy:
+    src: .xprofile
+    dest: ${HOME}/.xprofile
+    force: false

@@ -1,0 +1,34 @@
+---
+- name: Install msr-tools
+  pacman:
+    name: msr-tools
+
+- name: Copy cpu-throttling.sh
+  copy:
+    src: cpu-throttling.sh
+    dest: /usr/local/bin/cpu-throttling.sh
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+
+- name: Copy cpu-throttling.service
+  copy:
+    src: cpu-throttling.service
+    dest: /etc/systemd/system/cpu-throttling.service
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+
+- name: Copy cpu-throttling.timer
+  copy:
+    src: cpu-throttling.timer
+    dest: /etc/systemd/system/cpu-throttling.timer
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+
+- name: Enable cpu-throttling.timer
+  systemd:
+    name: cpu-throttling.timer
+    state: started
+    enabled: yes

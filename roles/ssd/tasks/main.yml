@@ -1,0 +1,5 @@
+---
+- name: Enabled fstrim.timer
+  service:
+    name: fstrim.timer
+    enabled: true

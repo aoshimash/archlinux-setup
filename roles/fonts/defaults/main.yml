@@ -1,0 +1,19 @@
+---
+fonts_list:
+  - noto-fonts
+  - noto-fonts-cjk
+  - noto-fonts-emoji
+  - noto-fonts-extra
+  - otf-ipafont
+  - ttf-hanazono
+  - ttf-sazanami
+  - adobe-source-han-sans-jp-fonts
+  - adobe-source-han-serif-jp-fonts
+  - ttf-mona
+  - ttf-ricty
+  - ttf-mac-fonts
+  - ttf-cica
+  - ttf-yosemite-san-francisco-font-git
+  - otf-takao
+  - otf-takaoex
+  - otf-takaomj

@@ -1,0 +1,9 @@
+---
+- name: Update database
+  command: updatedb
+
+- name: Start and enable Systemd Timer
+  systemd:
+    name: updatedb.timer
+    state: started
+    enabled: yes

@@ -1,0 +1,21 @@
+---
+- name: Install gnome
+  pacman:
+    name: gnome
+  notify: Start and enable gdm
+
+- name: Install gnome tools
+  pacman:
+    name: [gnome-tweaks, dconf-editor]
+
+- name: Install NetworkManager
+  pacman:
+    name: networkmanager
+
+- name: Activate NetworkManager.servise
+  systemd:
+    name: NetworkManager.service
+    state: started
+    enabled: yes
+
+    

@@ -1,0 +1,17 @@
+---
+- name: Install pacakges
+  pacman:
+    name: [ccache, pigz]
+
+- name: Create pacman dir if it doesn't exist
+  become: false
+  file:
+    path: ${HOME}/.config/pacman
+    state: directory
+
+- name: Copy makepkg
+  become: false
+  copy:
+    src: makepkg.conf
+    dest: ${HOME}/.config/pacman/makepkg.conf
+    backup: true

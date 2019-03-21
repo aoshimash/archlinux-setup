@@ -1,0 +1,4 @@
+---
+- name: Install packages
+  pacman:
+    name: [xf86-video-intel, mesa]
