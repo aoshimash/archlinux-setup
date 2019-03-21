@@ -3,9 +3,8 @@
   pacman:
     name: [fcitx, fcitx-im, fcitx-configtool, fcitx-mozc]
 
-- name: Copy .xprofile
-  become: false
+- name: Copy environment file
   copy:
-    src: .xprofile
-    dest: ${HOME}/.xprofile
-    force: false
+    src: environment
+    dest: /etc/environment
+    backup: true
