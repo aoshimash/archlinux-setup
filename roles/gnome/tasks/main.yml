@@ -6,7 +6,16 @@
 
 - name: Install gnome tools
   pacman:
-    name: [gnome-tweaks, dconf-editor]
+    name: [gnome-tweaks, dconf-editor, ]
+
+- name: Install gnome extensions
+  aur:
+    use: yay
+    name: "{{ item }}"
+    skip_installed: true
+  loop:
+    - gnome-shell-extension-topicons-plus
+    - gnome-shell-extension-no-topleft-hot-corner  
 
 - name: Install NetworkManager
   pacman:
