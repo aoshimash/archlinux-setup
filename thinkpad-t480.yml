@@ -18,6 +18,9 @@
     - name: locate
       tags:
         - locate
+    - name: patch_to_thinkpad_throttling_bug
+      tags:
+        - path_to_thinkpad_throttling_bug
     - name: videodriver-intel
       tags:
         - videodriver-intel
